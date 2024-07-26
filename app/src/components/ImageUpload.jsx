@@ -33,7 +33,7 @@ const ImageUpload = () => {
             try {
                 const result = await uploadImages(images);
                 console.log('Success:', result);
-                alert('Images uploaded successfully!');
+                // alert('Images uploaded successfully!');
             } catch (error) {
                 alert('Failed to upload images.');
             }
@@ -81,8 +81,8 @@ const ImageUpload = () => {
                 )}
             </div>
            <div className={'container-upload'}>
-               <Button onClick={handleAdd} className="button">Add</Button>
-               <Button onClick={handleFind} className="button">Find</Button>
+               <Button onClick={handleAdd} className="button">Add images</Button>
+               <Button design={"Emphasized"} onClick={handleFind} className="button">Analyze</Button>
            </div>
         </div>
     );

@@ -1,7 +1,7 @@
 /* ImageUpload.css */
 .container-dropzone{
-    height: 100vh;
     display: flex;
+    height: 40vh;
     align-items: center;
     /*justify-content: center;*/
     flex-direction: column;
@@ -10,7 +10,7 @@
 
 .dropzone {
     width:30%;
-    height: 30%;
+    height: 50%;
     border: 5px solid #cccccc;
     display: flex;
     align-items: center;

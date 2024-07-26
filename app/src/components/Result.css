@@ -1,0 +1,17 @@
+.result{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vh;
+}
+
+.result pre {
+    border: solid 5px grey;
+    height: 20vh;
+    width: 100vh;
+    overflow: auto;
+    padding: 10px;
+    margin-left: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

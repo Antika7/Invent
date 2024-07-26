@@ -29,7 +29,6 @@ const Sapui5Component = () => {
                               text="ShellBarItem"
                 />
             </ShellBar>
-            <ImageUpload/>
         </>
     );
 };
