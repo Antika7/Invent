@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, make_response, send_from_directory
+
 app = Flask(__name__)
 
 # Render index.html initially
@@ -11,10 +12,8 @@ def render_index():
 def antika():
     return render_template('index2.html')
 
-port = int(os.getenv("PORT", 0))
+# Set port to 3900
+port = 3900
 
 if __name__ == '__main__':
-    if port != 0:
-        app.run(host='0.0.0.0', port=port)
-    else:
-        app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
