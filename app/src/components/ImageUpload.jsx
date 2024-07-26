@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { uploadImages } from '../services/apiService'; // Adjust the import path as necessary
+import './ImageUpload.css';
+import {Button} from "@ui5/webcomponents-react"; // Import the CSS file
 
 const ImageUpload = () => {
     const [images, setImages] = useState([]);
@@ -50,17 +52,9 @@ const ImageUpload = () => {
     };
 
     return (
-        <div>
+        <div className={'container-dropzone'}>
             <div
                 {...getRootProps({ className: 'dropzone' })}
-                style={{
-                    border: '2px dashed #cccccc',
-                    borderRadius: '4px',
-                    padding: '20px',
-                    textAlign: 'center',
-                    cursor: 'pointer',
-                    marginBottom: '10px',
-                }}
             >
                 <input {...getInputProps()} />
                 <input
@@ -78,7 +72,7 @@ const ImageUpload = () => {
                                 key={index}
                                 src={image.url}
                                 alt={`Preview ${index}`}
-                                style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain', margin: '5px' }}
+                                className="imagePreview"
                             />
                         ))}
                     </div>
@@ -86,10 +80,10 @@ const ImageUpload = () => {
                     <p>Drag and drop images here, or click to select one</p>
                 )}
             </div>
-            <button onClick={handleAdd} style={{ marginRight: '10px' }}>
-                Add
-            </button>
-            <button onClick={handleFind}>Find</button>
+           <div className={'container-upload'}>
+               <Button onClick={handleAdd} className="button">Add</Button>
+               <Button onClick={handleFind} className="button">Find</Button>
+           </div>
         </div>
     );
 };
