@@ -19,6 +19,7 @@
 
 		<script id="myXml" type="text/xmldata">
 			<mvc:View
+                    xmlns:ui="sap.ui.unified"
 					xmlns:mvc="sap.ui.mvc"
 					xmlns="sap.f"
 					xmlns:m="sap.m"
@@ -40,6 +41,10 @@
 							<Avatar initials="UI"/>
 						</profile>
 				</ShellBar>				
+
+                <ui:FileUploader id="fileUploaderFS" multiple="false" />
+                <m:Button text="Upload" type="Accept" press="onUploadFile"/>
+ 
 			</mvc:View>
 		</script>
 
