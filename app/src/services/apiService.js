@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Define your base URL here
-const BASE_URL = 'https://your-backend-url.com';
+const BASE_URL = 'http://localhost:3900/';
 
 // Create an instance of axios with default configurations
 const apiClient = axios.create({
